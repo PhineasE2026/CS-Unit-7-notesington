@@ -74,5 +74,26 @@ public class Main {
 
       String lastElement = toBuy.get(toBuy.size() - 1);
       System.out.println(lastElement);
+
+      System.out.println(toBuy.listIterator());
+      System.out.println(toBuy.spliterator());
+      
+      toBuy.set(2, "GRETGFOBV BHRGPFOBRETWTPDFBFTRRPEFGRPEPERPPRPE AHHHHHHHHĦ");
+      System.out.println(toBuy.get(2));
+
+      toBuy.remove(1);
+      System.out.println(toBuy + " has been pickedded");
+
+      ArrayList<String> toDoList = new ArrayList<String>();
+      toDoList.add("Do homework");
+      toDoList.add("Help me make dinner");
+      toDoList.add("Call grandma");
+      toDoList.set(1, "Order pizza");
+      System.out.println(toDoList.size() + " things to do!");
+      System.out.println("Here's the first thing to do: " + toDoList.get(0));
+      toDoList.set(0, toDoList.get(1));
+      toDoList.set(1, toDoList.get(2));
+      toDoList.remove(2);
+      System.out.println(toDoList);
    }
 }
