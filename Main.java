@@ -1,6 +1,7 @@
 //import arraylist class
 //frm java.util pacKAGE....
 import java.util.ArrayList;
+import java.util.*;
 
 public class Main {
 
@@ -91,9 +92,67 @@ public class Main {
       toDoList.set(1, "Order pizza");
       System.out.println(toDoList.size() + " things to do!");
       System.out.println("Here's the first thing to do: " + toDoList.get(0));
-      toDoList.set(0, toDoList.get(1));
-      toDoList.set(1, toDoList.get(2));
-      toDoList.remove(2);
+      toDoList.remove(0);
       System.out.println(toDoList);
+
+      //7.3 bponk
+
+      ArrayList<Integer> bnums = new ArrayList<Integer>();
+      bnums.add(37);
+      bnums.add(77);
+      bnums.add(27);
+      bnums.add(36);
+      bnums.add(63);
+      int total = 0;
+
+      //enahanced faar each laaap
+
+      for (Integer val : bnums) {
+         total += val;
+      }
+
+      System.out.println(total);
+
+      for (int i = 0; i < bnums.size(); i++) {
+         total += bnums.get(i);
+      }
+
+      System.out.println(total);
+
+      boolean found = false;
+      int index = 0;
+      while (found == false) {
+         if (bnums.get(index) == 63) {
+            found = true;
+         }
+         else {
+            System.out.println(bnums.get(index) + " is not 63");
+            index++;
+         }
+      }
+      System.out.println(bnums.get(index) + " is gone.");
+
+      for (int i = 0; i < bnums.size(); i++) {
+         total *= bnums.get(i);
+      }
+
+      System.out.println(total + "...");
+
+      ArrayList<String> watchList = new ArrayList<String>();
+      watchList.add("Sopranos");
+      watchList.add("Prison Break");
+      watchList.add("Snowfall");
+      watchList.add("Death Note");
+      System.out.println("ehy i watched the top ofthe roof come off");
+      ArrayList<ArrayList<Integer>> grid = new ArrayList<>();
+        
+      for (int i = 0; i < 5; i++) {
+            grid.add(new ArrayList<>());
+            for (int j = 0; j < 5; j++) {
+               grid.get(i).add(i * j);
+            }
+      }
+        
+      System.out.println(grid);
    }
 }
